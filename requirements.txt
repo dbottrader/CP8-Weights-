@@ -1,3 +1,4 @@
+# CP8 checkpoint build dependencies
 transformers==4.46.3
 safetensors==0.4.5
 tokenizers==0.20.3
