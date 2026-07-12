@@ -1,0 +1,56 @@
+name: Build CP8 SafeTensors checkpoint
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_cp8_checkpoint.py"
+      - "scripts/verify_checkpoint.py"
+      - "requirements.txt"
+      - ".github/workflows/build-cp8-checkpoint.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cp8-checkpoint-build
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
+          pip install -r requirements.txt
+
+      - name: Build CP8 seed checkpoint
+        run: python scripts/build_cp8_checkpoint.py
+
+      - name: Verify checkpoint
+        run: python scripts/verify_checkpoint.py
+
+      - name: Commit generated model files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Build CP8 GPT-2 124M seed checkpoint"
+            git push origin HEAD:main
+          fi
