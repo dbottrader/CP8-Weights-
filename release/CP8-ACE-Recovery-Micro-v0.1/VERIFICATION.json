@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "checkpoint_load": "PASS",
+  "forward_pass": "PASS",
+  "logits_shape": [
+    1,
+    15,
+    256
+  ],
+  "finite_logits": true,
+  "tied_weights_restored": true,
+  "self_loss": 4.335977077484131
+}

@@ -1,0 +1,23 @@
+{
+  "model_id": "CP8-ACE-Recovery-Micro-v0.1",
+  "owner_steward": "Dennis M. Christie / CP8",
+  "historical_checkpoint_recovered": false,
+  "is_original_historical_124m_cp8": false,
+  "is_newly_trained_checkpoint": true,
+  "base_model": "none; trained from deterministic random initialization",
+  "architecture": "14.36M-parameter byte-level decoder-only transformer",
+  "training_data": "redacted ASIN-HHC/CP8/ACE/HOS project-recovery corpus plus curated governance seed",
+  "training_steps": 80,
+  "initial_loss": 5.468018054962158,
+  "final_loss": 3.022549867630005,
+  "evidence_grade": "E1_LOCAL_BOOTSTRAP",
+  "verification": "local load and forward-pass PASS",
+  "weights_sha256": "11297bcb6bd88f3f1436be063efd30711b01258c849e6b1f40cdcb4f71795305",
+  "corpus_sha256": "5fd2c072a17ce6659cb618d27d90ce93c3153d2d533af745b1b0e8c868ec9615",
+  "limitations": [
+    "This is a new reconstruction checkpoint, not the unrecovered historical CP8 binary.",
+    "It is a small bootstrap model, not the planned 124M public release.",
+    "Independent reproduction and held-out evaluation remain pending.",
+    "The reconstructed corpus must receive final human privacy and licensing review before public training release."
+  ]
+}

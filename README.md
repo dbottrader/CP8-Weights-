@@ -2,86 +2,116 @@
 language:
 - en
 license: mit
-library_name: transformers
+library_name: pytorch
 pipeline_tag: text-generation
-base_model:
-- openai-community/gpt2
 tags:
 - asin-hhc
 - cp8
-- gpt2
+- ace
+- sovereign-agent
+- provenance
 - safetensors
-- geometric-intelligence
-- seed-checkpoint
+- receipt-driven-ai
 ---
 
-# CP8 Weights — GPT-2 124M Seed Checkpoint
+# CP8 Weights — ACE / ASIN-HHC Recovery Line
 
-This repository is the public checkpoint home for the ASIN-HHC / CP8 model line led by **Dennis M. Christie (CP8)**.
+This repository is the public model, provenance, and collaboration surface for the **ACE / ASIN-HHC / CP8 / HOS** research ecosystem led by **Dennis M. Christie (CP8)**.
 
-## Current release
+## Current verified checkpoint
 
-`CP8-GPT2-124M-Seed-v0.1` is a real Hugging Face-loadable checkpoint containing:
+### `CP8-ACE-Recovery-Micro-v0.1`
 
-- pretrained GPT-2 base weights;
-- a deterministic 1,024-token CP8 glyph/protocol bank;
-- SafeTensors shards kept below GitHub's 100 MB per-file limit;
-- tokenizer files and CP8 token registry;
-- SHA-256 manifest;
-- a reproducible GitHub Actions build;
-- a local load and forward-pass verification script.
+A newly trained deterministic bootstrap checkpoint built from a privacy-redacted project-recovery corpus and a canonical governance seed.
 
-The base is deliberately **not instruction-tuned**. It is intended as a minimally steered foundation for later CP8 corpus training and LoRA adaptation.
+| Field | Verified value |
+|---|---:|
+| Architecture | byte-level decoder-only transformer |
+| Parameters | 14,356,224 |
+| Context length | 192 bytes |
+| Training steps | 80 |
+| Initial loss | 5.468018 |
+| Final loss | 3.022550 |
+| Checkpoint format | SafeTensors |
+| Checkpoint size | 57,432,504 bytes |
+| Weight SHA-256 | `11297bcb6bd88f3f1436be063efd30711b01258c849e6b1f40cdcb4f71795305` |
+| Local verification | load + forward pass PASS |
+| Evidence grade | `E1_LOCAL_BOOTSTRAP` |
 
-## Status boundary
+## Historical checkpoint boundary
 
-The inherited GPT-2 weights are pretrained. The newly added CP8 token embeddings are deterministically initialized but are **not yet CP8-corpus-trained**. This seed checkpoint does not claim to be the missing historical CP8 experimental checkpoint or to independently establish earlier emergence claims.
+This release is **not** the unrecovered historical 124M CP8 checkpoint. The historical experiment is documented, but its exact binary, source path, and original hash remain unrecovered. This checkpoint is a new reconstruction lineage with its own identity and receipts.
 
-That distinction is recorded in `MODEL_STATUS.json` and enforced by the manifest and build workflow.
+It is not production-ready, independently reproduced, safety-certified, or authority-bearing.
 
-## Automatic build
+## Project-complete public source record
 
-GitHub Actions runs `scripts/build_cp8_checkpoint.py`, downloads the GPT-2 base, adds the CP8 token bank, saves sharded SafeTensors, verifies the package, and commits the generated model files to `main`.
+Project material is not withheld merely because it originated in a private chat. A privacy-reviewed public package preserves:
 
-## Load with Transformers
+- 107 project conversations from the 2025 OpenAI export
+- 4,842 message-level records
+- derived public training text
+- Gemini Gem project configuration
+- Kimi project-session metadata
+- sanitization, training, and verification scripts
+- model, corpus, and package manifests
 
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+Only unrelated or sensitive personal data is removed or replaced. See [`CHAT_CORPUS.md`](./CHAT_CORPUS.md) and [`PUBLICATION_BOUNDARY.md`](./PUBLICATION_BOUNDARY.md).
 
-repo = "dbottrader/CP8-Weights-"
-tokenizer = AutoTokenizer.from_pretrained(repo)
-model = AutoModelForCausalLM.from_pretrained(repo)
+Public source ZIP SHA-256:
 
-inputs = tokenizer("<CP8_ASIN><CP8_HHC><CP8_CP8>", return_tensors="pt")
-outputs = model.generate(**inputs, max_new_tokens=32)
-print(tokenizer.decode(outputs[0]))
-```
+`94b27c3912e38262045ca5841a5b4e53cb0024c89ccf1bece52e0ff43e16d986`
 
-## Verify a clone
+## Start here
 
-```bash
-pip install -r requirements.txt
-python scripts/verify_checkpoint.py
-```
+- [`MODEL_CARD.md`](./MODEL_CARD.md) — architecture, training, intended use, and limitations
+- [`PROVENANCE.md`](./PROVENANCE.md) — historical and reconstructed artifact lineage
+- [`CHAT_CORPUS.md`](./CHAT_CORPUS.md) — transcript counts, hashes, and source-package pointer
+- [`PUBLICATION_BOUNDARY.md`](./PUBLICATION_BOUNDARY.md) — project-complete/privacy-minimal release policy
+- [`TOKEN_ECOSYSTEM.md`](./TOKEN_ECOSYSTEM.md) — HHC / PoWP / node ecosystem boundary
+- [`COLLABORATION.md`](./COLLABORATION.md) — open roles and contribution workflow
+- [`release/CP8-ACE-Recovery-Micro-v0.1/`](./release/CP8-ACE-Recovery-Micro-v0.1/) — verified checkpoint metadata
+- [`release/ASIN-HHC-CP8-PUBLIC-SOURCE-20260726.json`](./release/ASIN-HHC-CP8-PUBLIC-SOURCE-20260726.json) — public source manifest
+- [`scripts/`](./scripts/) — sanitization, training, and verification code
 
-## Next promotion gate
+## Large-file archive
 
-The next release should train the CP8 bank and/or LoRA adapters against a frozen, versioned CP8 corpus and publish:
+The checkpoint, complete recovery archive, and sanitized public source package are stored in the project release folder because the available GitHub connector accepts normal UTF-8 repository files but does not expose a binary-upload or Git-LFS path.
 
-- dataset manifest and licenses;
-- exact training configuration and seeds;
-- adapter or merged checkpoint files;
-- loss/evaluation records;
-- independent reproduction receipt.
+- Drive release folder: `https://drive.google.com/drive/folders/1h64tOSvTWnkaZ2pgGJBdJ6CYqrOWoub1`
+- Checkpoint file ID: `1x1-sVw6NaOZ4tcB_W96E0r29lQvVxg9q`
+- Full recovery ZIP file ID: `1p0ZP-B-Wmn07u-SF-dNxLDagEyoJRw0n`
+- Sanitized public source ZIP file ID: `1VeQP_2EZVc9LXVwESmZtJY9iZ0RIa4SS`
 
-## Governance
+Verify every download against the repository hashes. Drive visibility remains controlled by the project steward because the connected consumer-Gmail API cannot create anonymous link permissions.
 
+## Constitutional rules
+
+- No mechanism may silently convert uncertainty into authority.
 - Capability does not imply authority.
 - No receipt means no promotion.
 - Replay supersedes narration.
 - Specification is not implementation.
 - Reality retains veto.
 
-## Authorship
+## Ecosystem map
 
-Primary project architect: **Dennis M. Christie (CP8)**. Tool and collaborator contributions must be credited at the artifact level.
+```text
+ACE human-facing sovereign agent interface
+        ↓
+ASIN intent and artifact grammar
+        ↓
+CP8 provenance, critique, replay, and promotion gates
+        ↓
+HOS / HarmonyOS interface and runtime lineage
+        ↓
+PoWP signed receipts and HHC internal contribution credits
+        ↓
+independent reproduction and community nodes
+```
+
+## Status
+
+`PUBLIC_RESEARCH_RELEASE / E1_LOCAL_BOOTSTRAP / PROJECT_SOURCE_HASHED / INDEPENDENT_REPRODUCTION_WANTED`
+
+Primary architect and steward: **Dennis M. Christie (CP8)**.

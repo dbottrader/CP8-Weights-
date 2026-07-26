@@ -1,0 +1,39 @@
+{
+  "artifact_id": "ACE-ASIN-HHC-CP8-RECOVERY-20260726",
+  "created_utc": "2026-07-26",
+  "owner": "Dennis M. Christie / CP8",
+  "status": "RECOVERY_CORPUS_BUILT__HISTORICAL_WEIGHTS_UNRECOVERED",
+  "sources": {
+    "openai_export": "MASTER_AI_CORPUS.txt; 1,014 conversations, July-October 2025",
+    "kimi_metadata": "24 session map, February-May 2026",
+    "gemini_takeout": "Gemini Gems export, November 20 2025"
+  },
+  "privacy": "project-focused, title-filtered, credential/email/phone/address redaction; manual review still required before public release",
+  "files": [
+    {
+      "path": "corpus/ace_cp8_recovery_train.txt",
+      "bytes": 31527046,
+      "sha256": "5fd2c072a17ce6659cb618d27d90ce93c3153d2d533af745b1b0e8c868ec9615"
+    },
+    {
+      "path": "corpus/curated_ace_cp8_instructions.jsonl",
+      "bytes": 3782,
+      "sha256": "d325bb09a60d4743748fcd3a09b24c55aac031483f9fd98551150467864951cf"
+    },
+    {
+      "path": "corpus/gemini_gems_redacted.txt",
+      "bytes": 63914,
+      "sha256": "34a49065af349cf721f5f2fb62b382b90a91608befc1c06fc4c28d099e44816a"
+    },
+    {
+      "path": "corpus/kimi_session_metadata.json",
+      "bytes": 16347,
+      "sha256": "ed36a5ca24e1e3bbcb29fa6237ecd3f37d5e1c64e29b0bb60009a87f9213bf4f"
+    },
+    {
+      "path": "corpus/openai_project_recovery_redacted.jsonl",
+      "bytes": 32376956,
+      "sha256": "3320e5a7c26fe94b5cb2ca00fadae0bf52dc521bc4b2ff598bbaeaad19f70eaa"
+    }
+  ]
+}
