@@ -1,0 +1,22 @@
+{
+  "artifact": "ACE_ASIN_HHC_CP8_RECOVERY_20260726",
+  "generated_date": "2026-07-26",
+  "manifest_self_excluded": true,
+  "entries": [
+    {"path": "README.md", "size_bytes": 1267, "sha256": "15f7f13523ceb0f3bae18e2f125f5fb2e0737f5c803cd01855a88682efa9e324"},
+    {"path": "corpus/ace_cp8_recovery_train.txt", "size_bytes": 31527046, "sha256": "5fd2c072a17ce6659cb618d27d90ce93c3153d2d533af745b1b0e8c868ec9615"},
+    {"path": "corpus/curated_ace_cp8_instructions.jsonl", "size_bytes": 3782, "sha256": "d325bb09a60d4743748fcd3a09b24c55aac031483f9fd98551150467864951cf"},
+    {"path": "corpus/gemini_gems_redacted.txt", "size_bytes": 63914, "sha256": "34a49065af349cf721f5f2fb62b382b90a91608befc1c06fc4c28d099e44816a"},
+    {"path": "corpus/kimi_session_metadata.json", "size_bytes": 16347, "sha256": "ed36a5ca24e1e3bbcb29fa6237ecd3f37d5e1c64e29b0bb60009a87f9213bf4f"},
+    {"path": "corpus/openai_project_recovery_redacted.jsonl", "size_bytes": 32376956, "sha256": "3320e5a7c26fe94b5cb2ca00fadae0bf52dc521bc4b2ff598bbaeaad19f70eaa"},
+    {"path": "manifests/SOURCE_MANIFEST.json", "size_bytes": 1447, "sha256": "5a91a58875045592fb2ace27de307fbdb1cd7ae0f516df7b9e9bdd78bd9506ba"},
+    {"path": "model/CP8-ACE-Recovery-Micro-v0.1/MODEL_STATUS.json", "size_bytes": 1220, "sha256": "7e143b1a5ef686d8d3c0ae0feaf0d554865e5c71ad605a7439be77c2d32d56e5"},
+    {"path": "model/CP8-ACE-Recovery-Micro-v0.1/VERIFICATION.json", "size_bytes": 217, "sha256": "788bca03b092f11a6f8ad992f0e3b2ac50969e028ec6f18c035908cfa3899710"},
+    {"path": "model/CP8-ACE-Recovery-Micro-v0.1/config.json", "size_bytes": 306, "sha256": "46a0c0e382bd752ce4a6307f0b7515b09f836544ab4e0cfed9cb6a675daca177"},
+    {"path": "model/CP8-ACE-Recovery-Micro-v0.1/model.safetensors", "size_bytes": 57432504, "sha256": "11297bcb6bd88f3f1436be063efd30711b01258c849e6b1f40cdcb4f71795305"},
+    {"path": "model/CP8-ACE-Recovery-Micro-v0.1/training_log.csv", "size_bytes": 3293, "sha256": "e324ee5374ea3be28ec6de62e133f4515d4e422b09da6a8c61f4b8ceefa04dbb"},
+    {"path": "scripts/train_recovery_micro.py", "size_bytes": 7013, "sha256": "cc64ac5ddb3db5c936ffe9f403eb77700b6bd278f67085cb2a62dc31543db3cb"},
+    {"path": "scripts/verify_recovery_micro.py", "size_bytes": 1488, "sha256": "804dc060db33904a071608cd3cce5eac6845c775fde814458d5d48a903fd01a7"}
+  ],
+  "recovery_zip_sha256": "89b62fd8e33c58de40a8e8c569e26b71b53b9f761b303915bb41822fe9b45b05"
+}
