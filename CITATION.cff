@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this research release, cite the project and the exact artifact hash."
+title: "CP8-ACE-Recovery-Micro-v0.1"
+type: software
+authors:
+  - family-names: Christie
+    given-names: Dennis M.
+version: 0.1.0
+date-released: 2026-07-26
+repository-code: "https://github.com/dbottrader/CP8-Weights-"
+license: MIT
+keywords:
+  - ASIN-HHC
+  - CP8
+  - ACE
+  - provenance
+  - trustworthy AI
