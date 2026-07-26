@@ -1,0 +1,15 @@
+{
+  "vocab_size": 256,
+  "context_length": 192,
+  "d_model": 384,
+  "n_heads": 8,
+  "n_layers": 8,
+  "d_ff": 1536,
+  "dropout": 0.0,
+  "seed": 428,
+  "parameter_count": 14356224,
+  "architecture": "byte-level decoder-only transformer",
+  "training_steps": 80,
+  "batch_size": 4,
+  "learning_rate": 0.0003
+}
