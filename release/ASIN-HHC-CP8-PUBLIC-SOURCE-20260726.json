@@ -1,0 +1,28 @@
+{
+  "artifact_id": "ASIN-HHC-CP8-PUBLIC-SOURCE-20260726",
+  "owner_steward": "Dennis M. Christie / CP8",
+  "publication_scope": "project-relevant privacy-redacted source record",
+  "source_exports": {
+    "openai": "1,014 conversations reviewed, July-October 2025",
+    "gemini": "Gemini Gems configuration, November 2025",
+    "kimi": "project session metadata, February-May 2026"
+  },
+  "published_records": {
+    "project_conversations": 107,
+    "message_level_records": 4842,
+    "personal_messages_replaced": 1494
+  },
+  "hashes": {
+    "openai_message_jsonl_sha256": "66544ac1ca94231638af4676896efaea9428353dc8876d7028a5ab448e90bd04",
+    "public_training_text_sha256": "547ff1bc203d385e64977b220b450f1c12d6efe1be984e1cc84cc518d42b2f28",
+    "public_source_zip_sha256": "94b27c3912e38262045ca5841a5b4e53cb0024c89ccf1bece52e0ff43e16d986"
+  },
+  "drive": {
+    "folder_id": "1h64tOSvTWnkaZ2pgGJBdJ6CYqrOWoub1",
+    "file_id": "1VeQP_2EZVc9LXVwESmZtJY9iZ0RIa4SS",
+    "file_name": "ASIN_HHC_CP8_PUBLIC_SOURCE_20260726.zip",
+    "anonymous_link_permission_available_via_connector": false
+  },
+  "evidence_class": "HISTORICAL_PROJECT_DIALOGUE_UNVERIFIED",
+  "privacy_rule": "retain project content; replace unrelated or sensitive personal data at message level"
+}
