@@ -18,6 +18,16 @@ tags:
 
 This repository is the public model, provenance, and collaboration surface for the **ACE / ASIN-HHC / CP8 / HOS** research ecosystem led by **Dennis M. Christie (CP8)**.
 
+## Canonical public chronology
+
+The ecosystem-wide chronology, evidence classes, authorship boundary, and convergence position are maintained in the Holbrook technical spine:
+
+- [`PUBLIC_PROVENANCE_RECORD.md`](https://github.com/dbottrader/Holbrook-CP8-HHC/blob/main/docs/PUBLIC_PROVENANCE_RECORD.md)
+- [`public-record.json`](https://github.com/dbottrader/Holbrook-CP8-HHC/blob/main/provenance/public-record.json)
+- [`CITATION.cff`](https://github.com/dbottrader/Holbrook-CP8-HHC/blob/main/CITATION.cff)
+
+Open source permits use under the MIT license; it does not erase authorship, attribution, artifact hashes, or commit chronology. Similarity to another project is treated as conceptual convergence unless direct derivation is independently demonstrated.
+
 ## Current verified checkpoint
 
 ### `CP8-ACE-Recovery-Micro-v0.1`
